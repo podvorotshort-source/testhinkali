@@ -678,11 +678,14 @@ p { margin: 0 0 1em; }
   .gallery__item--last-wide { grid-column: span 2; }
   .hero { padding-top: calc(104px + env(safe-area-inset-top)); padding-bottom: 36px; }
   /* phones: show the whole sign — image fills the top part, text sits below on the dark background */
-  .hero__img { bottom: auto; height: 60svh; object-position: 46% 58%; }
-  .hero__shade {
-    background:
-      linear-gradient(180deg, rgba(14,10,7,.7) 0%, transparent 18%, transparent 46%, var(--bg) 64%);
+  /* the photo itself dissolves into the page at both edges — no hard line where it ends */
+  .hero__img {
+    bottom: auto; height: 60svh; object-position: 46% 58%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.55) 9%, #000 24%, #000 66%, rgba(0,0,0,.6) 82%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.55) 9%, #000 24%, #000 66%, rgba(0,0,0,.6) 82%, transparent 100%);
   }
+  .hero__shade { background: linear-gradient(180deg, rgba(14,10,7,.35) 0%, transparent 20%); }
+  .hero__content .eyebrow { opacity: 1; text-shadow: 0 1px 3px rgba(0,0,0,.9), 0 0 14px rgba(0,0,0,.8); }
   .hero__meta { font-size: .7rem; letter-spacing: .1em; }
   .hero__actions .btn { flex: 1 1 100%; }
   .kh-grid { grid-template-columns: 1fr; }
