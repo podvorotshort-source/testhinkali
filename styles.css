@@ -585,8 +585,9 @@ p { margin: 0 0 1em; }
   gap: 12px;
 }
 .gallery__item {
-  position: relative; overflow: hidden;
-  padding: 0; border: 1px solid var(--line); background: var(--bg-2);
+  position: relative; overflow: hidden; display: block;
+  -webkit-appearance: none; appearance: none;
+  padding: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-2);
   cursor: zoom-in;
 }
 .gallery__item--tall { grid-row: span 2; }
@@ -671,8 +672,10 @@ p { margin: 0 0 1em; }
 }
 
 @media (max-width: 640px) {
-  .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 44vw; gap: 8px; }
-  .gallery__item--wine { grid-row: auto; }
+  /* phones: wide shots take a full row, the rest go two per row (no tall tiles) */
+  .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 62vw; gap: 8px; }
+  .gallery__item--tall { grid-row: auto; }
+  .gallery__item--last-wide { grid-column: span 2; }
   .hero { padding-top: calc(104px + env(safe-area-inset-top)); padding-bottom: 36px; }
   /* phones: show the whole sign — image fills the top part, text sits below on the dark background */
   .hero__img { bottom: auto; height: 60svh; object-position: 46% 58%; }
