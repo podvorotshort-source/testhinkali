@@ -3,26 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Хинкальная — грузинская кухня в Тольятти</title>
-  <meta name="description" content="Хинкальная в Тольятти: хинкали ручной лепки, хачапури из печи, шашлык на углях и грузинское гостеприимство. Ежедневно 12:00–00:00, ул. Мира, 92А.">
+  <title>Кинто — грузинский ресторан и хинкальная в Тольятти</title>
+  <meta name="description" content="Кинто — грузинский ресторан в Тольятти: хинкали ручной лепки, хачапури из печи, шашлык на углях и грузинское гостеприимство. Ежедневно 12:00–00:00, ул. Мира, 92А.">
   <meta name="theme-color" content="#0e0a07">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Forum&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0a07'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23d6b67c'%3EХ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0a07'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23d6b67c'%3EК%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__logo">Хинкальная</a>
+      <a href="#top" class="nav__logo" aria-label="Кинто">Кинто&#772;</a>
       <div class="nav__links" id="navLinks">
         <a href="#about">О нас</a>
         <a href="#khinkali">Блюда</a>
         <a href="#menu">Меню</a>
         <a href="#atmosphere">Атмосфера</a>
+        <a href="#interior">Зал</a>
         <a href="#reviews">Отзывы</a>
         <a href="#contacts">Контакты</a>
         <a href="#booking" class="btn btn--gold nav__cta">Забронировать</a>
@@ -35,18 +36,17 @@
 
   <!-- HERO -->
   <header class="hero" id="top">
-    <img class="hero__img" src="assets/hero-hand.jpg" alt="Хинкали, которые держат рукой за хвостик, над тарелкой с острым соусом">
+    <img class="hero__img" src="assets/hero-sign.webp" alt="Деревянная вывеска «Кинто» на стене под золотым занавесом из цепочек в форме гор">
     <div class="hero__shade"></div>
-    <div class="hero__glow" aria-hidden="true"></div>
 
     <div class="hero__content">
-      <p class="eyebrow reveal">Тольятти · Грузинская кухня</p>
-      <h1 class="hero__title reveal">Хинкальная</h1>
-      <p class="hero__sub reveal">Сердце грузинской кухни</p>
+      <p class="eyebrow reveal">Тольятти · Хинкальная</p>
+      <!-- the name is on the photo's wooden sign; keep it for search engines and screen readers -->
+      <h1 class="sr-only">Кинто — грузинский ресторан</h1>
     </div>
 
     <div class="hero__bottom reveal">
-      <p class="hero__tag">Лепим вручную. Подаём с паром.</p>
+      <p class="hero__sub">Сердце грузинской кухни</p>
       <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
       <p class="hero__meta">Ежедневно 12:00 — 00:00 &nbsp;•&nbsp; ул. Мира, 92А</p>
       <div class="hero__actions">
@@ -62,8 +62,8 @@
     <section class="section about" id="about">
       <div class="container about__grid">
         <figure class="about__media reveal">
-          <img src="assets/lift-hand.jpg" alt="Горячий хинкали в руке, от него поднимается пар" loading="lazy">
-          <figcaption>18 складок — ни одной меньше</figcaption>
+          <img src="assets/about-table.webp" alt="Застолье в Кинто: сырная тарелка, красное вино и хинкали на фирменной сервировке" loading="lazy">
+          <figcaption>Вино, сыры и хинкали — застолье по-грузински</figcaption>
         </figure>
         <div class="about__text reveal">
           <p class="eyebrow">О нас</p>
@@ -177,8 +177,8 @@
     <section class="section atmosphere" id="atmosphere">
       <div class="container atmo__grid">
         <div class="atmo__photos reveal">
-          <img class="atmo__p1" src="assets/candles-2.jpg" alt="Свечи в тёплом полумраке зала" loading="lazy">
-          <img class="atmo__p2" src="assets/jug-2.jpg" alt="Глиняный кувшин с орнаментом" loading="lazy">
+          <img class="atmo__p1" src="assets/interior-lamps.webp" alt="Зал у окон с тёплыми янтарными светильниками" loading="lazy">
+          <img class="atmo__p2" src="assets/interior-figurine.webp" alt="Грузинская керамическая фигурка на полке" loading="lazy">
         </div>
         <div class="reveal">
           <p class="eyebrow">Атмосфера</p>
@@ -210,6 +210,29 @@
               <div><h4>Wi-Fi и парковка</h4><p>Бесплатный Wi-Fi, парковка рядом, оплата картой и по QR.</p></div>
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERIOR -->
+    <section class="section interior" id="interior">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Наш зал</p>
+          <h2 class="h2">Добро пожаловать в Кинто</h2>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+          <p class="section__lead">Мягкие кресла с грузинским орнаментом, открытая кухня, винная стена и чоха с папахой у камина — здесь хочется задержаться.</p>
+        </header>
+        <div class="gallery reveal">
+          <button class="gallery__item gallery__item--wide" data-full="assets/interior-niche.webp"><img src="assets/interior-niche.webp" alt="Винная ниша с росписью гранатами и диван с овечьей шкурой" loading="lazy"></button>
+          <button class="gallery__item gallery__item--tall" data-full="assets/interior-chairs.webp"><img src="assets/interior-chairs.webp" alt="Кресла с грузинским орнаментом" loading="lazy"></button>
+          <button class="gallery__item gallery__item--wide" data-full="assets/interior-round.webp"><img src="assets/interior-round.webp" alt="Круглый стол с бархатными креслами у кирпичной стены и зелёной двери" loading="lazy"></button>
+          <button class="gallery__item gallery__item--tall" data-full="assets/interior-hall.webp"><img src="assets/interior-hall.webp" alt="Главный зал: кресла с грузинским орнаментом и открытая кухня" loading="lazy"></button>
+          <button class="gallery__item" data-full="assets/interior-lounge.webp"><img src="assets/interior-lounge.webp" alt="Круглый стол с бархатными креслами" loading="lazy"></button>
+          <button class="gallery__item gallery__item--tall gallery__item--wine" data-full="assets/interior-wine.webp"><img src="assets/interior-wine.webp" alt="Винная стена" loading="lazy"></button>
+          <button class="gallery__item gallery__item--tall" data-full="assets/interior-fireplace.webp"><img src="assets/interior-fireplace.webp" alt="Камин и национальные костюмы — чоха и папаха" loading="lazy"></button>
+          <button class="gallery__item" data-full="assets/interior-view.webp"><img src="assets/interior-view.webp" alt="Вид на зал с фирменной сервировкой" loading="lazy"></button>
+          <button class="gallery__item" data-full="assets/interior-bar.webp"><img src="assets/interior-bar.webp" alt="Барная стойка и винные полки" loading="lazy"></button>
         </div>
       </div>
     </section>
@@ -297,12 +320,17 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__logo">Хинкальная</p>
+      <p class="footer__logo" aria-label="Кинто">Кинто&#772;</p>
       <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
       <p class="footer__meta">Тольятти • ул. Мира, 92А • ежедневно 12:00–00:00</p>
-      <p class="footer__copy">© 2026 Хинкальная. Грузинская кухня с душой.</p>
+      <p class="footer__copy">© 2026 Кинто. Грузинская кухня с душой.</p>
     </div>
   </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Закрыть">×</button>
+    <img alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -157,3 +157,16 @@ form.addEventListener("submit", e => {
   form.querySelector("button").disabled = true;
   form.querySelector("button").textContent = "Заявка отправлена";
 });
+
+// interior gallery lightbox
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+const closeLightbox = () => { lightbox.hidden = true; document.body.style.overflow = ""; };
+document.querySelectorAll(".gallery__item").forEach(item => item.addEventListener("click", () => {
+  lightboxImg.src = item.dataset.full;
+  lightboxImg.alt = item.querySelector("img").alt;
+  lightbox.hidden = false;
+  document.body.style.overflow = "hidden";
+}));
+lightbox.addEventListener("click", e => { if (e.target !== lightboxImg) closeLightbox(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !lightbox.hidden) closeLightbox(); });
